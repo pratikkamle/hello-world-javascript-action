@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: octocat/hello-world-javascript-action@v1.0.0
+        uses: pratikkamle/hello-world-javascript-action@v1.0.0
         with:
           who-to-greet: 'Pratik'
       # Use the output from the `hello` step
