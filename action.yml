@@ -15,7 +15,6 @@ inputs:
   customHeaders:
     description: 'The headers to include in the request (in JSON format)'
     required: true
-    default: '{"Content-Type": "application/json"}'
   method:
     description: 'The HTTP method for the request'
     required: true
