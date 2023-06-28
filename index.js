@@ -31,6 +31,8 @@ async function run() {
 
     // Log the response
     console.log('Response:', response.data);
+    core.setOutput('response', response.data);
+    core.setOutput('headers', response.headers);
   } catch (error) {
     // Handle any errors that occur during the execution
     console.error('Error:', error.message);
