@@ -18,16 +18,26 @@ async function run() {
       data: data
     };
 
-    // Set up the axios request configuration
-    const axiosConfig = {
+    axios({
       method: method.toUpperCase(),
       url: url,
-      headers: parsedHeaders,
-      data: requestBody
-    };
+      data: requestBody,
+      headers: parsedHeaders
+    }).then(apiResponse=>{
+       const response = apiResponse.data
+       response.json(response)
+    })
 
-    // Send the HTTP request
-    const response = await axios(axiosConfig);
+    // Set up the axios request configuration
+    // const axiosConfig = {
+    //   method: method.toUpperCase(),
+    //   url: url,
+    //   headers: parsedHeaders,
+    //   data: requestBody
+    // };
+
+    // // Send the HTTP request
+    // const response = await axios(axiosConfig);
 
     // Log the response
     console.log('Response:', response.data);
