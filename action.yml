@@ -5,9 +5,28 @@ inputs:
     description: 'Who to greet'
     required: true
     default: 'World'
+  data:
+    description: 'The data to include in the request body'
+    required: true
+  url:
+    description: 'The URL endpoint to send the POST request to'
+    required: true
+    default: 'https://enp7gmdcs56pb.x.pipedream.net/'
+  customHeaders:
+    description: 'The headers to include in the request (in JSON format)'
+    required: true
+    default: '{"Content-Type": "application/json"}'
+  method:
+    description: 'The HTTP method for the request'
+    required: true
+    default: 'post'
 outputs:
   time: # id of output
     description: 'The time we greeted you'
+  response:
+    description: 'The response body received from the POST request'
+  headers:
+    description: 'The headers received in the response'
 runs:
   using: 'node16'
   main: 'index.js'
