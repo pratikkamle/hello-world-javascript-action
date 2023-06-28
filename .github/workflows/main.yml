@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: pratikkamle/hello-world-javascript-action@v1.1.1
+        uses: pratikkamle/hello-world-javascript-action@v1.1.2
         with:
           who-to-greet: 'Pratik'
           url: 'https://enp7gmdcs56pb.x.pipedream.net/'
