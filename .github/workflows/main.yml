@@ -12,8 +12,8 @@ jobs:
           who-to-greet: 'Pratik'
           url: 'https://enp7gmdcs56pb.x.pipedream.net/'
           method: 'POST'
-          customHeaders: '{"Content-Type": "application/json"}'
-          data: '{"Custom action Job status": "Success"}'
+          customHeaders: '{\"Content-Type": "application/json\"}'
+          data: '{\"Custom action Job status\": \"Success\"}'
       # Use the output from the `hello` step
       - name: Get the output time
         run: |
