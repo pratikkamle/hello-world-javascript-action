@@ -10,6 +10,14 @@ jobs:
         uses: pratikkamle/hello-world-javascript-action@v1.0.0
         with:
           who-to-greet: 'Pratik'
+          url: 'https://enp7gmdcs56pb.x.pipedream.net/'
+          method: 'POST'
+          customHeaders: '{"Content-Type": "application/json"}'
+          data: '{"Custom action Job status": "Success"}'
       # Use the output from the `hello` step
       - name: Get the output time
-        run: echo "The time was ${{ steps.hello.outputs.time }}"
+        run: |
+          echo ${{ steps.hello.outputs.response }}
+          echo ${{ steps.hello.outputs.headers }}
+          echo ${{ fromJson(steps.hello.outputs.response).Status }}
+          echo "The time was ${{ steps.hello.outputs.time }}"
