@@ -17,7 +17,6 @@ jobs:
       # Use the output from the `hello` step
       - name: Get the output time
         run: |
-          echo "${{ steps.hello.outputs.response }}"
-          echo "${{ steps.hello.outputs.headers }}"
-          echo "${{ fromJson(steps.hello.outputs.response).Status }}"
+          echo ${{ steps.hello.outputs.response }}
+          echo ${{ steps.hello.outputs.headers }}
           echo "The time was ${{ steps.hello.outputs.time }}"
